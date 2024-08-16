@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+
+    <title>Document</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Marcellus&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./styles/style.css">
+
+    <meta name="robots" content="noindex, nofollow">
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <content-container>
+          <div class="header__content">
+            <div class="header__row">
+              <div class="header__logo">
+                <a href="/">
+                  <img src="./images/header-logo.svg" alt="">
+                </a>
+              </div>
+
+              <div class="header__nav">
+                <nav>
+                  <ul class="header__nav-list">
+                    <li class="header__auth--mobile">
+                      <a href="/">Login / Register</a>
+                    </li>
+
+                    <li class="header__nav-item">
+                      <nav-trigger>
+                        <span>HOME</span>
+                        <img src="./images/header-chevron-down.svg" alt="">
+                      </nav-trigger>
+
+                      <nav-content>
+                        <hidden-content>
+                          <ul class="header__sub-nav-list">
+                            <li>
+                              <a href="/">About Us</a>
+                            </li>
+                            <li>
+                              <a href="/">Our Team</a>
+                            </li>
+                            <li>
+                              <a href="/">Contact Us</a>
+                            </li>
+                            <li>
+                              <a href="/">Gallery</a>
+                            </li>
+                            <li>
+                              <a href="/">FAQ</a>
+                            </li>
+                          </ul>
+                        </hidden-content>
+                      </nav-content>
+                    </li>
+
+                    <li class="header__nav-item">
+                      <nav-trigger>
+                        <span>SHOP</span>
+                        <img src="./images/header-chevron-down.svg" alt="">
+                      </nav-trigger>
+
+                      <nav-content>
+                        <hidden-content>
+                          <ul class="header__sub-nav-list">
+                            <li>
+                              <a href="/">Product Categories</a>
+                            </li>
+                            <li>
+                              <a href="/">New Arrivals</a>
+                            </li>
+                            <li>
+                              <a href="/">Best Sellers</a>
+                            </li>
+                            <li>
+                              <a href="/">Discounts & Promotions</a>
+                            </li>
+                          </ul>
+                        </hidden-content>
+                      </nav-content>
+                    </li>
+
+                    <li class="header__nav-item">
+                      <nav-trigger>
+                        <span>BLOG</span>
+                        <img src="./images/header-chevron-down.svg" alt="">
+                      </nav-trigger>
+
+                      <nav-content>
+                        <hidden-content>
+                          <ul class="header__sub-nav-list">
+                            <li>
+                              <a href="/">Latest Posts</a>
+                            </li>
+                            <li>
+                              <a href="/">Popular Posts</a>
+                            </li>
+                            <li>
+                              <a href="/">Blog Categories</a>
+                            </li>
+                            <li>
+                              <a href="/">Editor's Picks</a>
+                            </li>
+                          </ul>
+                        </hidden-content>
+                      </nav-content>
+                    </li>
+
+                    <li class="header__nav-item">
+                      <nav-trigger>
+                        <span>ELEMENTS</span>
+                        <img src="./images/header-chevron-down.svg" alt="">
+                      </nav-trigger>
+
+                      <nav-content>
+                        <hidden-content>
+                          <ul class="header__sub-nav-list">
+                            <li>
+                              <a href="/">Ring Size Guide</a>
+                            </li>
+                            <li>
+                              <a href="/">Gemstone Information</a>
+                            </li>
+                            <li>
+                              <a href="/">Metal Types</a>
+                            </li>
+                            <li>
+                              <a href="/">Jewelry Care Tips</a>
+                            </li>
+                            <li>
+                              <a href="/">Custom Design Options</a>
+                            </li>
+                            <li>
+                              <a href="/">Engraving Services</a>
+                            </li>
+                            <li>
+                              <a href="/">Certificate of Authenticity</a>
+                            </li>
+                            <li>
+                              <a href="/">Jewelry Trends</a>
+                            </li>
+                          </ul>
+                        </hidden-content>
+                      </nav-content>
+                    </li>
+
+                    <li class="header__nav-item">
+                      <nav-trigger>
+                        <span>BUY</span>
+                        <img src="./images/header-chevron-down.svg" alt="">
+                      </nav-trigger>
+
+                      <nav-content>
+                        <hidden-content>
+                          <ul class="header__sub-nav-list">
+                            <li>
+                              <a href="/">Pricing</a>
+                            </li>
+                            <li>
+                              <a href="/">Licensing Packages</a>
+                            </li>
+                            <li>
+                              <a href="/">Support</a>
+                            </li>
+                          </ul>
+                        </hidden-content>
+                      </nav-content>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+
+              <div class="header__right">
+                <div class="header__auth">
+                  <a href="/">Login / Register</a>
+                </div>
+
+                <div class="header__search">
+                  <label>
+                    <input type="text" name="search">
+                    <i class="bi bi-search"></i>
+                  </label>
+                </div>
+
+                <div class="header__cart">
+                  <cart-trolley data-quantity="2">
+                    <i class="bi bi-cart"></i>
+                  </cart-trolley>
+
+                  <cart-amount>0.00</cart-amount>
+                </div>
+              </div>
+
+              <div class="header__mobile-burger">
+                <i class="bi bi-list"></i>
+              </div>
+            </div>
+          </div>
+        </content-container>
+      </header>
+
+      <main>
+        <section class="intro">
+          <content-container>
+            <div class="intro__content">
+              <div class="intro__row">
+                <div class="intro__text">
+                  <hgroup>
+                    <p><em>Donec sollicitudin</em></p>
+                    <h1>JEWELLERY STORE</h1>
+                  </hgroup>
+                  <p>
+                    An sincerity so extremity he additions. Her yet there truth merit. Mrs all projecting favourable now unpleasing. Son law garden chatty temper. Oh children provided to mr elegance marriage strongly
+                  </p>
+                  <div class="intro__buttons">
+                    <a href="/" class="btn btn-white">shop now</a>
+                    <a href="/" class="btn btn-outline">view more</a>
+                  </div>
+                </div>
+
+                <div class="intro__image">
+                  <img src="./images/intro-image.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </content-container>
+        </section>
+
+        <section class="featured">
+          <content-container>
+            <div class="featured__content">
+              <hgroup class="title">
+                <p><em>Adipisicing elit</em></p>
+                <h2>FEATURED PRODUCTS</h2>
+                <p>There are many variations of passages of lorem ipsum available.</p>
+              </hgroup>
+
+              <div class="featured__row">
+                <div class="featured__banner">
+                  <div class="banner">
+                    <div class="banner__content">
+                      <h3>TRISTIQUE<br>JUSTO</h3>
+                      <p>Started now shortly had for assured hearing expense led juvenile.</p>
+                      <span>SHOP NOW</span>
+                    </div>
+                    <img src="./images/banner.jpg" alt="">
+                    <a href="/"></a>
+                  </div>
+                </div>
+
+                <div class="featured__slider">
+                  <div class="swiper">
+                    <div class="swiper-wrapper">
+                      <featured-slide class="swiper-slide">
+                        <article class="product-item">
+                          <img src="./images/item-1.jpg" alt="">
+                          <h4>Curabitur sitamet</h4>
+                          <span class="category">Jewelry</span>
+                          <span class="price">169.00</span>
+                          <a href="/"></a>
+                        </article>
+                      </featured-slide>
+
+                      <featured-slide class="swiper-slide">
+                        <article class="product-item">
+                          <img src="./images/item-2.jpg" alt="">
+                          <h4>Porttitor accumsan</h4>
+                          <span class="category">Jewelry</span>
+                          <span class="price">269.00</span>
+                          <a href="/"></a>
+                        </article>
+                      </featured-slide>
+
+                      <featured-slide class="swiper-slide">
+                        <article class="product-item">
+                          <img src="./images/item-3.jpg" alt="">
+                          <h4>Sollicitudin molestie</h4>
+                          <span class="category">Jewelry</span>
+                          <span class="price">169.00</span>
+                          <a href="/"></a>
+                        </article>
+                      </featured-slide>
+
+                      <featured-slide class="swiper-slide">
+                        <article class="product-item">
+                          <img src="./images/item-4.jpg" alt="">
+                          <h4>Curabitur sitamet</h4>
+                          <span class="category">Jewelry</span>
+                          <span class="price">129.00</span>
+                          <a href="/"></a>
+                        </article>
+                      </featured-slide>
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev">
+                      <img src="./images/slider-chevron-right.svg" alt="">
+                    </div>
+                    <div class="swiper-button-next">
+                      <img src="./images/slider-chevron-right.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </content-container>
+        </section>
+
+        <section class="offer">
+          <content-container>
+            <div class="offer__content">
+              <div class="offer__row">
+                <div class="offer__special">
+                  <div class="offer__article-image">
+                    <img src="./images/offer-special.png" alt="">
+                  </div>
+
+                  <div class="offer__article-text">
+                    <em>Special offer</em>
+                    <h3>Mauris<br>Rhoncus</h3>
+                    <p>Curabitur non nullat amet.</p>
+                    <a class="btn btn-additional" href="/">view more</a>
+                  </div>
+                </div>
+
+                <div class="offer__column">
+                  <dl>
+                    <dt>FEATURED PRODUCTS</dt>
+                    <dd>
+                      <article class="product-item-small">
+                        <div class="product-item-small__image">
+                          <img src="./images/item-1.jpg" alt="">
+                        </div>
+                        <div class="product-item-small__text">
+                          <h4>Curabitur sitamet</h4>
+                          <span class="price">169</span>
+                        </div>
+                        <a href="/"></a>
+                      </article>
+
+                      <article class="product-item-small">
+                        <div class="product-item-small__image">
+                          <img src="./images/item-2.jpg" alt="">
+                        </div>
+                        <div class="product-item-small__text">
+                          <h4>Accumsan tincidunt</h4>
+                          <span class="price">199</span>
+                        </div>
+                        <a href="/"></a>
+                      </article>
+
+                      <article class="product-item-small">
+                        <div class="product-item-small__image">
+                          <img src="./images/item-3.jpg" alt="">
+                        </div>
+                        <div class="product-item-small__text">
+                          <h4>Praesent sapienmassa</h4>
+                          <span class="price">119</span>
+                        </div>
+                        <a href="/"></a>
+                      </article>
+                    </dd>
+                  </dl>
+                </div>
+
+                <div class="offer__column">
+                  <dl>
+                    <dt>NEW PRODUCTS</dt>
+                    <dd>
+                      <article class="product-item-small">
+                        <div class="product-item-small__image">
+                          <img src="./images/item-1.jpg" alt="">
+                        </div>
+                        <div class="product-item-small__text">
+                          <h4>Curabitur sitamet</h4>
+                          <span class="price">169</span>
+                        </div>
+                        <a href="/"></a>
+                      </article>
+
+                      <article class="product-item-small">
+                        <div class="product-item-small__image">
+                          <img src="./images/item-2.jpg" alt="">
+                        </div>
+                        <div class="product-item-small__text">
+                          <h4>Accumsan tincidunt</h4>
+                          <span class="price">199</span>
+                        </div>
+                        <a href="/"></a>
+                      </article>
+
+                      <article class="product-item-small">
+                        <div class="product-item-small__image">
+                          <img src="./images/item-3.jpg" alt="">
+                        </div>
+                        <div class="product-item-small__text">
+                          <h4>Praesent sapienmassa</h4>
+                          <span class="price">119</span>
+                        </div>
+                        <a href="/"></a>
+                      </article>
+                    </dd>
+                  </dl>
+                </div>
+
+              </div>
+            </div>
+          </content-container>
+        </section>
+
+        <section class="excerpts">
+          <content-container>
+            <div class="excerpts__content">
+              <hgroup class="title">
+                <p><em>Adipisicing elit</em></p>
+                <h2>JEWELRY DESIGN BLOG</h2>
+                <p>There are many variations of passages of lorem ipsum available.</p>
+              </hgroup>
+
+              <div class="excerpts__slider">
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <excerpts-slide class="swiper-slide">
+                      <article class="blog-article">
+                        <img src="./images/article-1.jpg" alt="">
+                        <article-category>Wooden accessories</article-category>
+                        <h3>A flat-picked chair made of a seat and sticks</h3>
+                        <cite>
+                          <span>Posted by</span>
+                          <img src="./images/avatar.jpg" alt="">
+                          <span>S. Rogers</span>
+                        </cite>
+                        <p>Parturient in potenti id rutrum duis torquent parturient sceler isque sit vestibulum a posuere scelerisque viverra urna. Egestas tristique vestib...</p>
+                        <excerpt-time>23<br>JUL</excerpt-time>
+                        <a href="/">Continue reading</a>
+                      </article>
+                    </excerpts-slide>
+
+                    <excerpts-slide class="swiper-slide">
+                      <article class="blog-article">
+                        <img src="./images/article-1.jpg" alt="">
+                        <article-category>Wooden accessories</article-category>
+                        <h3>A flat-picked chair made of a seat and sticks</h3>
+                        <cite>
+                          <span>Posted by</span>
+                          <img src="./images/avatar.jpg" alt="">
+                          <span>S. Rogers</span>
+                        </cite>
+                        <p>Parturient in potenti id rutrum duis torquent parturient sceler isque sit vestibulum a posuere scelerisque viverra urna. Egestas tristique vestib...</p>
+                        <excerpt-time>23<br>JUL</excerpt-time>
+                        <a href="/">Continue reading</a>
+                      </article>
+                    </excerpts-slide>
+
+                    <excerpts-slide class="swiper-slide">
+                      <article class="blog-article">
+                        <img src="./images/article-1.jpg" alt="">
+                        <article-category>Wooden accessories</article-category>
+                        <h3>A flat-picked chair made of a seat and sticks</h3>
+                        <cite>
+                          <span>Posted by</span>
+                          <img src="./images/avatar.jpg" alt="">
+                          <span>S. Rogers</span>
+                        </cite>
+                        <p>Parturient in potenti id rutrum duis torquent parturient sceler isque sit vestibulum a posuere scelerisque viverra urna. Egestas tristique vestib...</p>
+                        <excerpt-time>23<br>JUL</excerpt-time>
+                        <a href="/">Continue reading</a>
+                      </article>
+                    </excerpts-slide>
+
+                    <excerpts-slide class="swiper-slide">
+                      <article class="blog-article">
+                        <img src="./images/article-1.jpg" alt="">
+                        <article-category>Wooden accessories</article-category>
+                        <h3>A flat-picked chair made of a seat and sticks</h3>
+                        <cite>
+                          <span>Posted by</span>
+                          <img src="./images/avatar.jpg" alt="">
+                          <span>S. Rogers</span>
+                        </cite>
+                        <p>Parturient in potenti id rutrum duis torquent parturient sceler isque sit vestibulum a posuere scelerisque viverra urna. Egestas tristique vestib...</p>
+                        <excerpt-time>23<br>JUL</excerpt-time>
+                        <a href="/">Continue reading</a>
+                      </article>
+                    </excerpts-slide>
+                  </div>
+
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-button-prev">
+                    <img src="./images/slider-chevron-right.svg" alt="">
+                  </div>
+                  <div class="swiper-button-next">
+                    <img src="./images/slider-chevron-right.svg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </content-container>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <content-container>
+          <div class="footer__content">
+            <div class="footer__row">
+              <div class="footer__contacts">
+                <a href="/">
+                  <img src="./images/footer-logo.svg" alt="">
+                </a>
+                <p>Condimentum adipiscing vel neque dis nam parturient orci at scelerisque neque dis nam parturient.</p>
+
+                <ul>
+                  <li>
+                    <img src="./images/icon-location.svg" alt="">
+                    <span>451 Wall Street, UK, London</span>
+                  </li>
+
+                  <li>
+                    <img src="./images/icon-phone.svg" alt="">
+                    <span>Phone: (064) 332-1233</span>
+                  </li>
+
+                  <li>
+                    <img src="./images/icon-mail.svg" alt="">
+                    <span>Fax: (099) 453-1357</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="footer__posts">
+                <dl>
+                  <dt>RECENT POSTS</dt>
+                  <dd>
+                    <article class="blog-article-small">
+                      <div class="blog-article-small__image">
+                        <img src="./images/article-1.jpg" alt="">
+                      </div>
+
+                      <div class="blog-article-small__text">
+                        <h4>A companion for extra sleeping</h4>
+                        <excerpt-time>July 23, 2016</excerpt-time>
+                      </div>
+                    </article>
+
+                    <article class="blog-article-small">
+                      <div class="blog-article-small__image">
+                        <img src="./images/article-2.jpg" alt="">
+                      </div>
+
+                      <div class="blog-article-small__text">
+                        <h4>Outdoor seating collection inspiration</h4>
+                        <excerpt-time>July 23, 2016</excerpt-time>
+                      </div>
+                    </article>
+                  </dd>
+                </dl>
+              </div>
+
+              <div class="footer__links">
+                <dl>
+                  <dt>OUR STORES</dt>
+                  <dd>
+                    <ul>
+                      <li><a href="">New York</a></li>
+                      <li><a href="">London SF</a></li>
+                      <li><a href="">Cockfosters BP</a></li>
+                      <li><a href="">Los Angeles</a></li>
+                      <li><a href="">Chicago</a></li>
+                    </ul>
+                  </dd>
+                </dl>
+              </div>
+
+              <div class="footer__links">
+                <dl>
+                  <dt>USEFUL LINKS</dt>
+                  <dd>
+                    <ul>
+                      <li><a href="">Privacy Policy</a></li>
+                      <li><a href="">Returns</a></li>
+                      <li><a href="">Terms & Conditions</a></li>
+                      <li><a href="">Contact Us</a></li>
+                      <li><a href="">Latest News</a></li>
+                    </ul>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </content-container>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./scripts/main.js" type="module"></script>
+  </body>
+
+</html>
