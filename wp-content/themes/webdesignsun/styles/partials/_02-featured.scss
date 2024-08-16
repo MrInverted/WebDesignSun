@@ -1,0 +1,69 @@
+.featured {
+
+  &__content {
+    hgroup {
+      margin-bottom: 50px;
+
+      @media (max-width: $forDesktop) {
+        margin-bottom: 40px;
+      }
+
+      @media (max-width: $forTablet) {
+        margin-bottom: 30px;
+      }
+
+      @media (max-width: $forPhone) {
+        margin-bottom: 20px;
+      }
+    }
+
+    featured-slide {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 270px 1fr;
+    gap: 30px;
+
+    @media (max-width: $forDesktop) {
+      grid-template-columns: 230px 1fr;
+    }
+
+    @media (max-width: $forTablet) {
+      grid-template-columns: 220px 1fr;
+    }
+
+    @media (max-width: $forPhone) {
+      gap: 20px;
+      grid-template-columns: 194px 1fr;
+    }
+
+    @media (max-width: $minimum) {
+      max-width: 400px;
+      margin: 0 auto;
+      gap: 20px;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__banner {
+    @media (max-width: $minimum) {
+      max-width: 200px;
+      margin: 0 auto;
+    }
+  }
+
+  &__slider {
+    overflow: hidden;
+    position: relative;
+    padding: 0 45px;
+
+    @media (max-width: $minimum) {
+      padding: 0 30px;
+      margin: 0 -20px;
+    }
+  }
+}

@@ -1,0 +1,121 @@
+.footer {
+  padding: 60px 0;
+  background-color: #EAEAEA;
+
+  &__content {
+    dl {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    dt {
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 30% 30% 1fr 1fr;
+    gap: 30px;
+
+    @media (max-width: $forTablet) {
+      grid-template-columns: 50% 1fr 1fr;
+    }
+
+    @media (max-width: $forPhone) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__contacts {
+    @media (max-width: $forTablet) {
+      grid-row: 2;
+      grid-column: span 3;
+
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    @media (max-width: $forPhone) {
+      grid-row: 1;
+      grid-column: span 2;
+
+      align-items: center;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    a:has(img) {
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+
+    p {
+      margin-bottom: 30px;
+      color: var(--additional);
+
+      @media (max-width: $forPhone) {
+        margin-bottom: 0;
+        text-align: center;
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      flex-shrink: 0;
+
+      color: var(--additional);
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+  }
+
+  &__posts {
+    padding-right: 40px;
+
+    dd {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    @media (max-width: $forDesktop) {
+      padding-right: 0;
+    }
+
+    @media (max-width: $forPhone) {
+      grid-column: span 2;
+
+      dt {
+        text-align: center;
+      }
+    }
+  }
+
+  &__links {
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      color: var(--additional);
+    }
+
+    li:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-decoration-color: var(--additional);
+      text-underline-offset: 2px;
+    }
+  }
+}

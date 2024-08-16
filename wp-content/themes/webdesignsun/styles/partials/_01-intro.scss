@@ -1,0 +1,92 @@
+.intro {
+  color: var(--white);
+  background-color: var(--black);
+
+  padding: 0;
+  margin-bottom: 50px;
+
+  @media (max-width: $forTablet) {
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: $forPhone) {
+    margin-bottom: 30px;
+  }
+
+  &__content {}
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    min-height: 400px;
+    height: calc(100vh - 80px);
+    max-height: 900px;
+
+    @media (max-width: $forDesktop) {
+      max-height: 600px;
+    }
+
+    @media (max-width: $forTablet) {
+      max-height: 500px;
+    }
+
+    @media (max-width: $forPhone) {
+      padding-top: 40px;
+      height: unset;
+      max-height: unset;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+
+  &__text {
+    max-width: 470px;
+    justify-self: end;
+    align-self: center;
+
+    hgroup {
+      margin-bottom: 20px;
+    }
+
+    hgroup p {
+      margin-bottom: 10px;
+    }
+
+    hgroup em {
+      font-size: 22px;
+
+      @media (max-width: $forTablet) {
+        font-size: 20px;
+      }
+
+      @media (max-width: $forPhone) {
+        font-size: 18px;
+      }
+    }
+
+    hgroup+p {
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__image {
+    align-self: end;
+    height: 100%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: bottom;
+    }
+  }
+}
