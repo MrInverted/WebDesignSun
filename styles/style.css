@@ -103,6 +103,8 @@ html {
   overflow-x: hidden;
   position: relative;
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 /*--------------------*/
@@ -306,6 +308,25 @@ h4 {
 .title p {
   color: var(--additional);
   line-height: 1.8;
+}
+
+.grid--three {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 20px;
+}
+@media (max-width: 760px) {
+  .grid--three {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 15px;
+  }
+}
+
+.single h1,
+.single h2 {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .swiper {
@@ -623,6 +644,7 @@ h4 {
 .footer {
   padding: 60px 0;
   background-color: #EAEAEA;
+  margin-top: auto;
 }
 .footer__content dl {
   display: flex;
@@ -691,6 +713,9 @@ h4 {
   display: flex;
   align-items: center;
   gap: 5px;
+}
+.footer__contacts i {
+  font-size: 18px;
 }
 .footer__posts {
   padding-right: 40px;
@@ -1198,6 +1223,21 @@ h4 {
   text-transform: uppercase;
   text-wrap: balance;
 }
+@media (max-width: 1200px) {
+  .blog-article h3 {
+    font-size: 22px;
+  }
+}
+@media (max-width: 1000px) {
+  .blog-article h3 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 760px) {
+  .blog-article h3 {
+    font-size: 18px;
+  }
+}
 .blog-article p {
   color: var(--additional);
   margin-bottom: 20px;
@@ -1252,6 +1292,7 @@ h4 {
   gap: 15px;
   padding-bottom: 15px;
   border-bottom: 1px solid #DFDFDF;
+  position: relative;
 }
 .blog-article-small:last-child {
   border-bottom: unset;
@@ -1285,4 +1326,12 @@ h4 {
 .blog-article-small__text excerpt-time {
   display: block;
   color: var(--additional);
+}
+.blog-article-small a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
 }
