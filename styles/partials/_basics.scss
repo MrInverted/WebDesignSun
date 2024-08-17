@@ -202,3 +202,21 @@ h4 {
     line-height: 1.8;
   }
 }
+
+.grid--three {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 20px;
+
+  @media (max-width: $forPhone) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 15px;
+  }
+}
+
+.single h1,
+.single h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}

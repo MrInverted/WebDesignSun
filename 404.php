@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<section>
+<section class="single">
   <content-container>
     <h1>Ooooups, something went wrong...</h1>
   </content-container>
