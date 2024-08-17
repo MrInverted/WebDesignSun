@@ -37,7 +37,8 @@
 
                       <?php 
                         $menu_loop = cfs_get_option( 'options', 'header_menu' );
-                        foreach ($menu_loop as $item) {
+                        if ($menu_loop) {
+                          foreach ($menu_loop as $item) {
                       ?>
                         <li class="header__nav-item">
                           <nav-trigger>
@@ -51,20 +52,21 @@
 
                                 <?php 
                                   $sub_menu_loop = $item['sub_menu'];
-                                  foreach ($sub_menu_loop as $sub_item) {
+                                  if ($sub_menu_loop) {
+                                    foreach ($sub_menu_loop as $sub_item) {
                                 ?>
                                   <li>
                                     <a href="<?php echo $sub_item['link']; ?>">
                                       <?php echo $sub_item['text']; ?>
                                     </a>
                                   </li>
-                                <?php } ?>
+                                <?php } } ?>
 
                               </ul>
                             </hidden-content>
                           </nav-content>
                         </li>
-                      <?php } ?>
+                      <?php } } ?>
                       
                   </ul>
                 </nav>

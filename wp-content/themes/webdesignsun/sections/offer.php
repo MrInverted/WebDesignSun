@@ -4,7 +4,7 @@
       <div class="offer__row">
         <div class="offer__special">
           <div class="offer__article-image">
-            <img src="./images/offer-special.png" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/offer-special.png" alt="">
           </div>
 
           <div class="offer__article-text">
@@ -21,7 +21,7 @@
             <dd>
               <article class="product-item-small">
                 <div class="product-item-small__image">
-                  <img src="./images/item-1.jpg" alt="">
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/item-1.jpg" alt="">
                 </div>
                 <div class="product-item-small__text">
                   <h4>Curabitur sitamet</h4>
@@ -32,7 +32,7 @@
 
               <article class="product-item-small">
                 <div class="product-item-small__image">
-                  <img src="./images/item-2.jpg" alt="">
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/item-2.jpg" alt="">
                 </div>
                 <div class="product-item-small__text">
                   <h4>Accumsan tincidunt</h4>
@@ -43,7 +43,7 @@
 
               <article class="product-item-small">
                 <div class="product-item-small__image">
-                  <img src="./images/item-3.jpg" alt="">
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/item-3.jpg" alt="">
                 </div>
                 <div class="product-item-small__text">
                   <h4>Praesent sapienmassa</h4>
@@ -61,7 +61,7 @@
             <dd>
               <article class="product-item-small">
                 <div class="product-item-small__image">
-                  <img src="./images/item-1.jpg" alt="">
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/item-1.jpg" alt="">
                 </div>
                 <div class="product-item-small__text">
                   <h4>Curabitur sitamet</h4>
@@ -72,7 +72,7 @@
 
               <article class="product-item-small">
                 <div class="product-item-small__image">
-                  <img src="./images/item-2.jpg" alt="">
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/item-2.jpg" alt="">
                 </div>
                 <div class="product-item-small__text">
                   <h4>Accumsan tincidunt</h4>
@@ -83,7 +83,7 @@
 
               <article class="product-item-small">
                 <div class="product-item-small__image">
-                  <img src="./images/item-3.jpg" alt="">
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/item-3.jpg" alt="">
                 </div>
                 <div class="product-item-small__text">
                   <h4>Praesent sapienmassa</h4>

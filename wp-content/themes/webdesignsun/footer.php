@@ -4,25 +4,21 @@
             <div class="footer__row">
               <div class="footer__contacts">
                 <a href="/">
-                  <img src="./images/footer-logo.svg" alt="">
+                  <img src="<?php echo cfs_get_option( 'options', 'footer-logo' ); ?> " alt="">
                 </a>
-                <p>Condimentum adipiscing vel neque dis nam parturient orci at scelerisque neque dis nam parturient.</p>
+                <p><?php echo cfs_get_option( 'options', 'footer-text' ); ?> </p>
 
                 <ul>
-                  <li>
-                    <img src="./images/icon-location.svg" alt="">
-                    <span>451 Wall Street, UK, London</span>
-                  </li>
-
-                  <li>
-                    <img src="./images/icon-phone.svg" alt="">
-                    <span>Phone: (064) 332-1233</span>
-                  </li>
-
-                  <li>
-                    <img src="./images/icon-mail.svg" alt="">
-                    <span>Fax: (099) 453-1357</span>
-                  </li>
+                  <?php 
+                    $contacts_loop = cfs_get_option( 'options', 'footer_contacts' ); 
+                    if ($contacts_loop) {
+                      foreach ($contacts_loop as $item) {
+                  ?>
+                    <li>
+                      <i class="<?php echo $item['icon']; ?>"></i>
+                      <span><?php echo $item['text']; ?></span>
+                    </li>
+                  <?php } } ?>
                 </ul>
               </div>
 

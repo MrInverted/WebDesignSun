@@ -2,85 +2,41 @@
   <content-container>
     <div class="excerpts__content">
       <hgroup class="title">
-        <p><em>Adipisicing elit</em></p>
-        <h2>JEWELRY DESIGN BLOG</h2>
-        <p>There are many variations of passages of lorem ipsum available.</p>
+        <p><em><?php echo CFS() -> get('blog_sup_title'); ?></em></p>
+        <h2><?php echo CFS() -> get('blog_title'); ?></h2>
+        <p><?php echo CFS() -> get('blog_sub_title'); ?></p>
       </hgroup>
 
       <div class="excerpts__slider">
         <div class="swiper">
           <div class="swiper-wrapper">
-            <excerpts-slide class="swiper-slide">
-              <article class="blog-article">
-                <img src="./images/article-1.jpg" alt="">
-                <article-category>Wooden accessories</article-category>
-                <h3>A flat-picked chair made of a seat and sticks</h3>
-                <cite>
-                  <span>Posted by</span>
-                  <img src="./images/avatar.jpg" alt="">
-                  <span>S. Rogers</span>
-                </cite>
-                <p>Parturient in potenti id rutrum duis torquent parturient sceler isque sit vestibulum a posuere scelerisque viverra urna. Egestas tristique vestib...</p>
-                <excerpt-time>23<br>JUL</excerpt-time>
-                <a href="/">Continue reading</a>
-              </article>
-            </excerpts-slide>
 
-            <excerpts-slide class="swiper-slide">
-              <article class="blog-article">
-                <img src="./images/article-1.jpg" alt="">
-                <article-category>Wooden accessories</article-category>
-                <h3>A flat-picked chair made of a seat and sticks</h3>
-                <cite>
-                  <span>Posted by</span>
-                  <img src="./images/avatar.jpg" alt="">
-                  <span>S. Rogers</span>
-                </cite>
-                <p>Parturient in potenti id rutrum duis torquent parturient sceler isque sit vestibulum a posuere scelerisque viverra urna. Egestas tristique vestib...</p>
-                <excerpt-time>23<br>JUL</excerpt-time>
-                <a href="/">Continue reading</a>
-              </article>
-            </excerpts-slide>
+          <?php 
+            $posts = CFS() -> get('blog_posts');
 
+            if ($posts) {
+              foreach ($posts as $post_id) {
+                $the_post = get_post( $post_id );
+                setup_postdata( $the_post );
+                global $post;
+                $post = $the_post;
+          ?>
             <excerpts-slide class="swiper-slide">
-              <article class="blog-article">
-                <img src="./images/article-1.jpg" alt="">
-                <article-category>Wooden accessories</article-category>
-                <h3>A flat-picked chair made of a seat and sticks</h3>
-                <cite>
-                  <span>Posted by</span>
-                  <img src="./images/avatar.jpg" alt="">
-                  <span>S. Rogers</span>
-                </cite>
-                <p>Parturient in potenti id rutrum duis torquent parturient sceler isque sit vestibulum a posuere scelerisque viverra urna. Egestas tristique vestib...</p>
-                <excerpt-time>23<br>JUL</excerpt-time>
-                <a href="/">Continue reading</a>
-              </article>
+              <?php get_template_part('sections/article'); ?>
             </excerpts-slide>
+          <?php 
+            wp_reset_postdata();
+            } } 
+          ?>
 
-            <excerpts-slide class="swiper-slide">
-              <article class="blog-article">
-                <img src="./images/article-1.jpg" alt="">
-                <article-category>Wooden accessories</article-category>
-                <h3>A flat-picked chair made of a seat and sticks</h3>
-                <cite>
-                  <span>Posted by</span>
-                  <img src="./images/avatar.jpg" alt="">
-                  <span>S. Rogers</span>
-                </cite>
-                <p>Parturient in potenti id rutrum duis torquent parturient sceler isque sit vestibulum a posuere scelerisque viverra urna. Egestas tristique vestib...</p>
-                <excerpt-time>23<br>JUL</excerpt-time>
-                <a href="/">Continue reading</a>
-              </article>
-            </excerpts-slide>
           </div>
 
           <div class="swiper-pagination"></div>
           <div class="swiper-button-prev">
-            <img src="./images/slider-chevron-right.svg" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/slider-chevron-right.svg" alt="">
           </div>
           <div class="swiper-button-next">
-            <img src="./images/slider-chevron-right.svg" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/slider-chevron-right.svg" alt="">
           </div>
         </div>
       </div>

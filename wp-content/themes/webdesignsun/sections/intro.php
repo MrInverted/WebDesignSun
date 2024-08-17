@@ -4,20 +4,24 @@
       <div class="intro__row">
         <div class="intro__text">
           <hgroup>
-            <p><em>Donec sollicitudin</em></p>
-            <h1>JEWELRY STORE</h1>
+            <p><em><?php echo CFS() -> get('intro_sup_title'); ?></em></p>
+            <h1><?php echo CFS() -> get('intro_title'); ?></h1>
           </hgroup>
-          <p>
-            An sincerity so extremity he additions. Her yet there truth merit. Mrs all projecting favourable now unpleasing. Son law garden chatty temper. Oh children provided to mr elegance marriage strongly
-          </p>
+          <p><?php echo CFS() -> get('intro_sub_title'); ?></p>
+          
           <div class="intro__buttons">
-            <a href="/" class="btn btn-white">shop now</a>
-            <a href="/" class="btn btn-outline">view more</a>
+            <a href="<?php echo CFS() -> get('intro_white_button_link'); ?>" class="btn btn-white">
+              <?php echo CFS() -> get('intro_white_button_text'); ?>
+            </a>
+
+            <a href="<?php echo CFS() -> get('intro_outline_button_link'); ?>" class="btn btn-outline">
+              <?php echo CFS() -> get('intro_outline_button_text'); ?>
+            </a>
           </div>
         </div>
 
         <div class="intro__image">
-          <img src="./images/intro-image.jpg" alt="">
+          <img src="<?php echo CFS() -> get('intro_image'); ?>" alt="">
         </div>
       </div>
     </div>

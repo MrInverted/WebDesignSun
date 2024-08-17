@@ -2,9 +2,9 @@
   <content-container>
     <div class="featured__content">
       <hgroup class="title">
-        <p><em>Adipisicing elit</em></p>
-        <h2>FEATURED PRODUCTS</h2>
-        <p>There are many variations of passages of lorem ipsum available.</p>
+        <p><em><?php echo CFS() -> get('featured_sup_title'); ?></em></p>
+        <h2><?php echo CFS() -> get('featured_title'); ?></h2>
+        <p><?php echo CFS() -> get('featured_sub_title'); ?></p>
       </hgroup>
 
       <div class="featured__row">
@@ -15,7 +15,7 @@
               <p>Started now shortly had for assured hearing expense led juvenile.</p>
               <span>SHOP NOW</span>
             </div>
-            <img src="./images/banner.jpg" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/banner.jpg" alt="">
             <a href="/"></a>
           </div>
         </div>
@@ -25,7 +25,7 @@
             <div class="swiper-wrapper">
               <featured-slide class="swiper-slide">
                 <article class="product-item">
-                  <img src="./images/item-1.jpg" alt="">
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/item-1.jpg" alt="">
                   <h4>Curabitur sitamet</h4>
                   <span class="category">Jewelry</span>
                   <span class="price">169.00</span>
@@ -35,7 +35,7 @@
 
               <featured-slide class="swiper-slide">
                 <article class="product-item">
-                  <img src="./images/item-2.jpg" alt="">
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/item-2.jpg" alt="">
                   <h4>Porttitor accumsan</h4>
                   <span class="category">Jewelry</span>
                   <span class="price">269.00</span>
@@ -45,7 +45,7 @@
 
               <featured-slide class="swiper-slide">
                 <article class="product-item">
-                  <img src="./images/item-3.jpg" alt="">
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/item-3.jpg" alt="">
                   <h4>Sollicitudin molestie</h4>
                   <span class="category">Jewelry</span>
                   <span class="price">169.00</span>
@@ -55,7 +55,7 @@
 
               <featured-slide class="swiper-slide">
                 <article class="product-item">
-                  <img src="./images/item-4.jpg" alt="">
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/item-4.jpg" alt="">
                   <h4>Curabitur sitamet</h4>
                   <span class="category">Jewelry</span>
                   <span class="price">129.00</span>
@@ -66,10 +66,10 @@
 
             <div class="swiper-pagination"></div>
             <div class="swiper-button-prev">
-              <img src="./images/slider-chevron-right.svg" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/images/slider-chevron-right.svg" alt="">
             </div>
             <div class="swiper-button-next">
-              <img src="./images/slider-chevron-right.svg" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/images/slider-chevron-right.svg" alt="">
             </div>
           </div>
         </div>

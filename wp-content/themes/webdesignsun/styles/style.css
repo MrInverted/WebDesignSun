@@ -692,6 +692,9 @@ h4 {
   align-items: center;
   gap: 5px;
 }
+.footer__contacts i {
+  font-size: 18px;
+}
 .footer__posts {
   padding-right: 40px;
 }
@@ -1198,6 +1201,21 @@ h4 {
   text-transform: uppercase;
   text-wrap: balance;
 }
+@media (max-width: 1200px) {
+  .blog-article h3 {
+    font-size: 22px;
+  }
+}
+@media (max-width: 1000px) {
+  .blog-article h3 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 760px) {
+  .blog-article h3 {
+    font-size: 18px;
+  }
+}
 .blog-article p {
   color: var(--additional);
   margin-bottom: 20px;
@@ -1294,4 +1312,17 @@ h4 {
   right: 0;
   left: 0;
   z-index: 2;
+}
+
+.grid--three {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 20px;
+}
+@media (max-width: 760px) {
+  .grid--three {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 15px;
+  }
 }

@@ -12,3 +12,15 @@
 @import "./partials/extra-banner";
 @import "./partials/extra-product";
 @import "./partials/extra-blog-article";
+
+.grid--three {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 20px;
+
+  @media (max-width: $forPhone) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 15px;
+  }
+}

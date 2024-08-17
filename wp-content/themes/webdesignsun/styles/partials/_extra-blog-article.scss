@@ -32,6 +32,18 @@
     margin-bottom: 10px;
     text-transform: uppercase;
     text-wrap: balance;
+
+    @media (max-width: $forDesktop) {
+      font-size: 22px;
+    }
+
+    @media (max-width: $forTablet) {
+      font-size: 20px;
+    }
+
+    @media (max-width: $forPhone) {
+      font-size: 18px;
+    }
   }
 
   p {
