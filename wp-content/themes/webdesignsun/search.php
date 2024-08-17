@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<section>
+<section class="single">
   <content-container>
     <h2>Searching by: "<?php the_search_query(); ?>"</h2>
     <div class="grid--three">

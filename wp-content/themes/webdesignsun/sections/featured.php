@@ -10,58 +10,64 @@
       <div class="featured__row">
         <div class="featured__banner">
           <div class="banner">
-            <div class="banner__content">
-              <h3>TRISTIQUE<br>JUSTO</h3>
-              <p>Started now shortly had for assured hearing expense led juvenile.</p>
-              <span>SHOP NOW</span>
-            </div>
-            <img src="<?php echo get_template_directory_uri(); ?>/images/banner.jpg" alt="">
-            <a href="/"></a>
+
+          <?php 
+              $banner = CFS() -> get('featured_banner');
+
+              if ($banner) {
+                $the_product = wc_get_product( $banner[0] );
+
+                $image_url = wp_get_attachment_url($the_product->get_image_id());
+                $title = $the_product->get_name();
+                $product_excerpt = $the_product->get_short_description();
+                $product_link = $the_product->get_permalink();
+            ?>
+              <div class="banner__content">
+                <h3><?php echo $title; ?></h3>
+                <p><?php echo $product_excerpt; ?></p>
+                <span>SHOP NOW</span>
+              </div>
+              <img src="<?php echo $image_url; ?>" alt="">
+              <a href="<?php echo $product_link; ?>"></a>
+            <?php 
+              } 
+            ?>
+
           </div>
         </div>
+
+
 
         <div class="featured__slider">
           <div class="swiper">
             <div class="swiper-wrapper">
-              <featured-slide class="swiper-slide">
-                <article class="product-item">
-                  <img src="<?php echo get_template_directory_uri(); ?>/images/item-1.jpg" alt="">
-                  <h4>Curabitur sitamet</h4>
-                  <span class="category">Jewelry</span>
-                  <span class="price">169.00</span>
-                  <a href="/"></a>
-                </article>
-              </featured-slide>
 
-              <featured-slide class="swiper-slide">
-                <article class="product-item">
-                  <img src="<?php echo get_template_directory_uri(); ?>/images/item-2.jpg" alt="">
-                  <h4>Porttitor accumsan</h4>
-                  <span class="category">Jewelry</span>
-                  <span class="price">269.00</span>
-                  <a href="/"></a>
-                </article>
-              </featured-slide>
+            <?php 
+              $products = CFS() -> get('featured_products');
 
-              <featured-slide class="swiper-slide">
-                <article class="product-item">
-                  <img src="<?php echo get_template_directory_uri(); ?>/images/item-3.jpg" alt="">
-                  <h4>Sollicitudin molestie</h4>
-                  <span class="category">Jewelry</span>
-                  <span class="price">169.00</span>
-                  <a href="/"></a>
-                </article>
-              </featured-slide>
+              if ($products) {
+                foreach ($products as $id) {
+                  $the_product = wc_get_product( $id );
 
+                  $image_url = wp_get_attachment_url($the_product->get_image_id());
+                  $title = $the_product->get_name();
+                  $categories = wp_get_post_terms($id, 'product_cat')[0];
+                  $price = $the_product->get_price();
+                  $product_link = $the_product->get_permalink();
+            ?>
               <featured-slide class="swiper-slide">
                 <article class="product-item">
-                  <img src="<?php echo get_template_directory_uri(); ?>/images/item-4.jpg" alt="">
-                  <h4>Curabitur sitamet</h4>
-                  <span class="category">Jewelry</span>
-                  <span class="price">129.00</span>
-                  <a href="/"></a>
+                  <img src="<?php echo $image_url; ?>" alt="">
+                  <h4><?php echo $title; ?></h4>
+                  <span class="category"><?php echo $categories->name; ?></span>
+                  <span class="price"><?php echo $price; ?></span>
+                  <a href="<?php echo $product_link; ?>"></a>
                 </article>
               </featured-slide>
+            <?php 
+              } } 
+            ?>
+
             </div>
 
             <div class="swiper-pagination"></div>
