@@ -1,0 +1,45 @@
+.excerpts {
+  margin-bottom: 50px;
+
+  @media (max-width: $forTablet) {
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: $forPhone) {
+    margin-bottom: 30px;
+  }
+
+  &__content {
+    hgroup {
+      margin-bottom: 50px;
+
+      @media (max-width: $forDesktop) {
+        margin-bottom: 40px;
+      }
+
+      @media (max-width: $forTablet) {
+        margin-bottom: 30px;
+      }
+
+      @media (max-width: $forPhone) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__slider {
+    overflow: hidden;
+    position: relative;
+    padding: 0 45px;
+
+    @media (max-width: $forTablet) {
+      padding: 0 30px;
+      margin: 0 -20px;
+    }
+
+    @media (max-width: $forPhone) {
+      padding: 0 45px;
+      margin: 0 20px;
+    }
+  }
+}

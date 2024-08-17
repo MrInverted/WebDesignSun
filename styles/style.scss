@@ -1,0 +1,26 @@
+@import "./partials/nullstyle";
+@import "./partials/basics";
+@import "./partials/swiper";
+@import "./partials/header";
+@import "./partials/footer";
+
+@import "./partials/01-intro";
+@import "./partials/02-featured";
+@import "./partials/03-offer";
+@import "./partials/04-excerpts";
+
+@import "./partials/extra-banner";
+@import "./partials/extra-product";
+@import "./partials/extra-blog-article";
+
+.grid--three {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 20px;
+
+  @media (max-width: $forPhone) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 15px;
+  }
+}
